@@ -15,6 +15,15 @@ canvas.addEventListener('mousedown', beginDrawing);
 canvas.addEventListener('mousemove', continueDrawing); 
 canvas.addEventListener('mouseup', endDrawing); 
 
+// Implement the cursor style based on the selected tool
+const tools = document.querySelectorAll('input[name="tool"]'); // get all tools
+tools.forEach(tool => {
+    tool.addEventListener('change', (event) => {
+        selectedTool = event.target.value; // update selected tool
+        updateCursorStyle(selectedTool); // update cursor style
+    });
+});
+
 // Track user input to draw shapes dynamically
 function beginDrawing(event) {
     draw = true; 
