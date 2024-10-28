@@ -25,12 +25,12 @@ function endDrawing() {
     draw = false;
     ctx.closePath();
 }
+
 function continueDrawing(event) {
     if (draw) {
         let currentX = event.offsetX; 
         let currentY = event.offsetY; 
-    }
-}
+
 
 // Task 3: Implement Shape Drawing Logic
 
@@ -45,6 +45,8 @@ function continueDrawing(event) {
     case 'circle':
         drawCircle(startX, startY, currentX, currentY); // draw a circle
         break;
+  }
+ }
 }
 
 function drawLine(x1, y1, x2, y2) { // draw a line between two points
