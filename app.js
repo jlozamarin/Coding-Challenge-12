@@ -80,14 +80,17 @@ ctx.stroke();
 
 // Task 4: Add Color Selection and Canvas Clearing
 
-// Add color selection
+// color selector
 const colorChooser = document.getElementById('colorChooser');
 colorChooser.addEventListener('input', (event) => {
     drawingColor = event.target.value; 
 });
 
-// Add canvas clearing
+// clear canvas button
 const clearButton = document.getElementById('clearCanvas');
-clearButton.addEventListener('click', () => {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-});
+clearButton.addEventListener('click', clearCanvas);
+
+function clearCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height); // clear canvas
+}
+updateCursorStyle(selectedTool);
