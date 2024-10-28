@@ -77,3 +77,17 @@ ctx.beginPath(); // Start a new shape
 ctx.arc(x1, y1, radius, 0, Math.PI * 2);
 ctx.stroke();
 }
+
+// Task 4: Add Color Selection and Canvas Clearing
+
+// Add color selection
+const colorChooser = document.getElementById('colorChooser');
+colorChooser.addEventListener('input', (event) => {
+    drawingColor = event.target.value; 
+});
+
+// Add canvas clearing
+const clearButton = document.getElementById('clearCanvas');
+clearButton.addEventListener('click', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
