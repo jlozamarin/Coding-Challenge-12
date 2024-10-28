@@ -87,6 +87,8 @@ ctx.stroke();
 
 // Task 4: Add Color Selection and Canvas Clearing
 
+ctx.strokeStyle = drawingColor; // set the drawing color
+
 // clear canvas button
 const clearButton = document.getElementById('clearCanvas');
 clearButton.addEventListener('click', clearCanvas);
