@@ -46,7 +46,7 @@ function continueDrawing(event) {
     if (draw) {
         let currentX = event.offsetX; 
         let currentY = event.offsetY; 
-
+        ctx.strokeStyle = drawingColor; // set the drawing color
 
 // Task 3: Implement Shape Drawing Logic
 
@@ -86,8 +86,6 @@ ctx.stroke();
 }
 
 // Task 4: Add Color Selection and Canvas Clearing
-
-ctx.strokeStyle = drawingColor; // set the drawing color
 
 // clear canvas button
 const clearButton = document.getElementById('clearCanvas');
