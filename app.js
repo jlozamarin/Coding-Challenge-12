@@ -8,7 +8,8 @@ const ctx = canvas.getContext('2d'); // 2D drawing context
 
 let draw = false; 
 let startX, startY; 
-let selectedTool = 'line'; 
+let selectedTool = 'line';
+let drawingColor = '#000000'; 
 
 // Add event listeners
 canvas.addEventListener('mousedown', beginDrawing);
@@ -93,4 +94,3 @@ clearButton.addEventListener('click', clearCanvas);
 function clearCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height); // clear canvas
 }
-updateCursorStyle(selectedTool);
