@@ -29,7 +29,6 @@ function continueDrawing(event) {
     if (draw) {
         let currentX = event.offsetX; 
         let currentY = event.offsetY; 
-        drawShape(startX, startY, currentX, currentY); 
     }
 }
 
@@ -46,10 +45,6 @@ function continueDrawing(event) {
     case 'circle':
         drawCircle(startX, startY, currentX, currentY); // draw a circle
         break;
-}
-function endDrawing() {
-draw = false;
-ctx.closePath(); // end the current shape
 }
 
 function drawLine(x1, y1, x2, y2) { // draw a line between two points
