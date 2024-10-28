@@ -25,6 +25,12 @@ tools.forEach(tool => {
     });
 });
 
+// color selector
+const colorChooser = document.getElementById('colorChooser');
+colorChooser.addEventListener('input', (event) => {
+    drawingColor = event.target.value; 
+});
+
 // Track user input to draw shapes dynamically
 function beginDrawing(event) {
     draw = true; 
@@ -80,12 +86,6 @@ ctx.stroke();
 }
 
 // Task 4: Add Color Selection and Canvas Clearing
-
-// color selector
-const colorChooser = document.getElementById('colorChooser');
-colorChooser.addEventListener('input', (event) => {
-    drawingColor = event.target.value; 
-});
 
 // clear canvas button
 const clearButton = document.getElementById('clearCanvas');
